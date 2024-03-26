@@ -1,10 +1,10 @@
-package com.example.hexagonalstudy.application.service;
+package com.example.hexagonalstudy.account.application.service;
 
-import com.example.hexagonalstudy.application.port.in.SendMoneyCommand;
-import com.example.hexagonalstudy.application.port.in.SendMoneyUseCase;
-import com.example.hexagonalstudy.application.port.out.AccountLock;
-import com.example.hexagonalstudy.application.port.out.LoadAccountPort;
-import com.example.hexagonalstudy.application.port.out.UpdateAccountStatePort;
+import com.example.hexagonalstudy.account.application.port.out.AccountLock;
+import com.example.hexagonalstudy.account.application.port.in.SendMoneyCommand;
+import com.example.hexagonalstudy.account.application.port.in.SendMoneyUseCase;
+import com.example.hexagonalstudy.account.application.port.out.LoadAccountPort;
+import com.example.hexagonalstudy.account.application.port.out.UpdateAccountStatePort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 

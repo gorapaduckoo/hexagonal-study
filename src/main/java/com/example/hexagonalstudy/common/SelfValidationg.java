@@ -1,4 +1,4 @@
-package com.example.common;
+package com.example.hexagonalstudy.common;
 
 import jakarta.validation.*;
 

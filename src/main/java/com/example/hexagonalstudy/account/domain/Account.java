@@ -1,4 +1,4 @@
-package com.example.hexagonalstudy.domain;
+package com.example.hexagonalstudy.account.domain;
 
 import lombok.*;
 

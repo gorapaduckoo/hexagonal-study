@@ -1,8 +1,8 @@
-package com.example.hexagonalstudy.application.port.in;
+package com.example.hexagonalstudy.account.application.port.in;
 
-import com.example.common.SelfValidationg;
-import com.example.hexagonalstudy.domain.Account;
-import com.example.hexagonalstudy.domain.Money;
+import com.example.hexagonalstudy.common.SelfValidationg;
+import com.example.hexagonalstudy.account.domain.Account;
+import com.example.hexagonalstudy.account.domain.Money;
 import jakarta.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.Value;

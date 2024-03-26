@@ -1,4 +1,4 @@
-package com.example.hexagonalstudy.application.port.in;
+package com.example.hexagonalstudy.account.application.port.in;
 
 public interface SendMoneyUseCase {
 
