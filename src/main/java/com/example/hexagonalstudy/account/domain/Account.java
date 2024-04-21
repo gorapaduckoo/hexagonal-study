@@ -51,6 +51,24 @@ public class Account {
         return Money.add(this.calculateBalance(), money.negate())
                 .isPositiveOrZero();
     }
+
+    /**
+     * Tries to deposit a certain amount of money to this account.
+     * If sucessful, creates a new activity with a positive value.
+     * @return true if the deposit was successful, false if not.
+     */
+    public boolean deposit(Money money, AccountId sourceAccountId) {
+        Activity deposit = new Activity(
+                this.id,
+                sourceAccountId,
+                this.id,
+                LocalDateTime.now(),
+                money
+        );
+        this.activityWindow.addActivity(deposit);
+        return true;
+    }
+
     @Value
     public static class AccountId {
         Long value;
