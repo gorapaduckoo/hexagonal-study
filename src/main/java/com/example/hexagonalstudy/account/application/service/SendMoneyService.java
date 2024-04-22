@@ -8,11 +8,13 @@ import com.example.hexagonalstudy.account.application.port.out.UpdateAccountStat
 import com.example.hexagonalstudy.account.domain.Account;
 import com.example.hexagonalstudy.account.domain.Account.AccountId;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
+@Service
 @Transactional
 public class SendMoneyService implements SendMoneyUseCase {
 
@@ -64,8 +66,8 @@ public class SendMoneyService implements SendMoneyUseCase {
     }
 
     private void checkThreshold(SendMoneyCommand command) {
-        if(command.getMoney().isGreaterThan(moneyTransferProperties.getMaximumTransferThreshole())) {
-            throw new ThresholdExceededException(moneyTransferProperties.getMaximumTransferThreshole(), command.getMoney());
+        if(command.getMoney().isGreaterThan(moneyTransferProperties.getMaximumTransferThreshold())) {
+            throw new ThresholdExceededException(moneyTransferProperties.getMaximumTransferThreshold(), command.getMoney());
         }
     }
 }
