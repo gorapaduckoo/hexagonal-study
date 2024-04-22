@@ -4,11 +4,13 @@ import com.example.hexagonalstudy.account.application.port.in.SendMoneyCommand;
 import com.example.hexagonalstudy.account.application.port.in.SendMoneyUseCase;
 import com.example.hexagonalstudy.account.domain.Account.AccountId;
 import com.example.hexagonalstudy.account.domain.Money;
+import com.example.hexagonalstudy.common.WebAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@WebAdapter
 @RestController
 @RequiredArgsConstructor
 public class SendMoneyController {

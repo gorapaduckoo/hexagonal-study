@@ -7,14 +7,14 @@ import com.example.hexagonalstudy.account.application.port.out.LoadAccountPort;
 import com.example.hexagonalstudy.account.application.port.out.UpdateAccountStatePort;
 import com.example.hexagonalstudy.account.domain.Account;
 import com.example.hexagonalstudy.account.domain.Account.AccountId;
+import com.example.hexagonalstudy.common.UseCase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
-@Service
+@UseCase
 @Transactional
 public class SendMoneyService implements SendMoneyUseCase {
 

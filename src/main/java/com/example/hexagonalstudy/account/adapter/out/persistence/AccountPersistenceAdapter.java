@@ -5,15 +5,15 @@ import com.example.hexagonalstudy.account.application.port.out.UpdateAccountStat
 import com.example.hexagonalstudy.account.domain.Account;
 import com.example.hexagonalstudy.account.domain.Account.AccountId;
 import com.example.hexagonalstudy.account.domain.Activity;
+import com.example.hexagonalstudy.common.PersistenceAdapter;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Component
+@PersistenceAdapter
 public class AccountPersistenceAdapter implements LoadAccountPort, UpdateAccountStatePort {
 
     private final AccountRepository accountRepository;
